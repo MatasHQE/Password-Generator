@@ -24,11 +24,13 @@ while True:
         print("Write number above 0")
         continue
     
+    lower = choose("Do you want lower letters (y/n)? ")
     upper = choose("Do you want upper letters (y/n)? ")
     numbers = choose("Do you want numbers (y/n)? ")
     symbols = choose("Do you want symbols (y/n)? ")
 
-    char = string.ascii_lowercase
+    char = ""
+    char += charters(lower,string.ascii_lowercase)
     char += charters(upper,string.ascii_uppercase)
     char += charters(numbers,string.digits)
     char += charters(symbols,string.punctuation)
